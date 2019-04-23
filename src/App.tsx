@@ -1,28 +1,53 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+/**
+ * @file [App]
+ * @author [mzvast]
+ * @email [mzvast@gmail.com]
+ * @create date 2019-04-22 17:23:07
+ */
+/* eslint-disable max-len,babel/new-cap,operator-linebreak,fecs-export-on-declare,space-before-function-paren */
+import React, {Component} from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+import styled, {css, keyframes} from 'styled-components';
+// import {Box, palette, Flex} from '@baidu/rubik-ui';
+
+import Config from '@/config';
+import {
+    HashRouter as Router,
+    Route,
+    Switch,
+    Redirect,
+    withRouter
+} from 'react-router-dom';
+import PrivateRoute from '@/utils/PrivateRoute';
+import Joke from '@/routes/Joke';
+import Home from '@/routes/Home';
+import Landing from '@/routes/Landing';
+interface Props {}
+interface State {}
+class App extends Component<Props, State> {
+    state: State;
+
+    static defaultProps = {};
+
+    render() {
+        return (
+            <Router>
+                <Switch>
+                    <PrivateRoute
+                        exact
+                        path={Config.path.joke}
+                        component={Joke}
+                    />
+                    <PrivateRoute
+                        exact
+                        path={Config.path.home}
+                        component={Home}
+                    />
+                    <Route exact path={Config.path.root} component={Landing} />
+                    <Redirect to={Config.path.root} />
+                </Switch>
+            </Router>
+        );
+    }
 }
-
 export default App;

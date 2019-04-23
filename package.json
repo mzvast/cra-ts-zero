@@ -1,30 +1,73 @@
 {
-  "name": "cra-ts-zero",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@types/jest": "24.0.11",
-    "@types/node": "11.13.6",
-    "@types/react": "16.8.14",
-    "@types/react-dom": "16.8.4",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8",
-    "typescript": "3.4.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "name": "cra-ts-zero",
+    "version": "0.1.0",
+    "license": "MIT",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "analyze": "source-map-explorer build/static/js/main.*",
+        "postinstall": "yarn link-modules",
+        "unlink-modules": "rimraf node_modules/@",
+        "link-modules": "globstar --node -- lnk \"./src/*\" \"./node_modules/@/\"",
+        "relink-modules": "yarn unlink-modules && yarn link-modules",
+        "types-installer": "types-installer"
+    },
+    "dependencies": {
+        "@baidu/rubik-ui": "^0.2.5",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-redux": "^6.0.1",
+        "react-router": "^4.4.0-beta.1",
+        "react-router-dom": "^4.4.0-beta.1",
+        "redux": "^4.0.1",
+        "styled-components": "^4.1.3"
+    },
+    "devDependencies": {
+        "@rematch/core": "^1.1.0",
+        "@types/jest": "24.0.11",
+        "@types/node": "11.13.6",
+        "@types/react": "^16.8.14",
+        "@types/react-dom": "^16.8.4",
+        "@types/react-redux": "^7.0.8",
+        "@types/react-router": "^4.4.5",
+        "@types/react-router-dom": "^4.3.2",
+        "@types/redux": "^3.6.0",
+        "@types/styled-components": "^4.1.14",
+        "@typescript-eslint/eslint-plugin": "^1.7.0",
+        "@typescript-eslint/parser": "^1.7.0",
+        "eslint-config-prettier": "^4.1.0",
+        "eslint-plugin-prettier": "^3.0.1",
+        "eslint-plugin-react": "^7.12.4",
+        "fecs": "^1.6.4",
+        "globstar": "^1.0.0",
+        "husky": "^1.3.1",
+        "lint-staged": "^8.1.5",
+        "lnk-cli": "^1.0.1",
+        "prettier": "^1.16.4",
+        "progress-bar-webpack-plugin": "^1.12.1",
+        "react-app-rewire-hot-loader": "^2.0.1",
+        "react-app-rewire-imagemin-plugin": "https://github.com/mzvast/react-app-rewire-imagemin-plugin",
+        "react-app-rewire-styled-components": "^3.0.2",
+        "react-app-rewire-webpack-bundle-analyzer": "^1.0.1",
+        "react-app-rewired": "^2.1.1",
+        "react-hot-loader": "^4.8.0",
+        "react-scripts": "2.1.8",
+        "redux-devtools": "^3.5.0",
+        "rimraf": "^2.6.3",
+        "source-map-explorer": "^1.7.0",
+        "types-installer": "^1.6.3",
+        "typescript": "3.4.4",
+        "webpack-dashboard": "^3.0.0"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
 }
