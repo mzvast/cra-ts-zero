@@ -10,7 +10,7 @@ import React, {Component} from 'react';
 import styled, {css, keyframes} from 'styled-components';
 // import {Box, palette, Flex} from '@baidu/rubik-ui';
 
-import Config from '@/config';
+import Config from 'config';
 import {
     HashRouter as Router,
     Route,
@@ -18,10 +18,10 @@ import {
     Redirect,
     withRouter
 } from 'react-router-dom';
-import PrivateRoute from '@/utils/PrivateRoute';
-import Joke from '@/routes/Joke';
-import Home from '@/routes/Home';
-import Landing from '@/routes/Landing';
+import PrivateRoute from 'utils/PrivateRoute';
+import Joke from 'routes/Joke';
+import Home from 'routes/Home';
+import Landing from 'routes/Landing';
 interface Props {}
 interface State {}
 class App extends Component<Props, State> {

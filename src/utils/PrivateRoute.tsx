@@ -8,8 +8,8 @@
 
 import React from 'react';
 import {Route, Redirect} from 'react-router-dom';
-import Config from '@/config';
-import AuthGuard from '@/api/AuthGuard';
+import Config from 'config';
+import AuthGuard from 'api/AuthGuard';
 // https://tylermcginnis.com/react-router-protected-routes-authentication/
 const PrivateRoute = ({component: Component, ...rest}) => {
     if (!AuthGuard.isAuthenticated) {

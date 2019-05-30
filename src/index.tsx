@@ -11,29 +11,24 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux';
-import store from './store';
-import {AppContainer} from 'react-hot-loader';
+import {store} from './store';
 import {ThemeProvider} from '@baidu/rubik-ui';
 import theme from './theme';
-// ReactDOM.render(<App />, document.getElementById('root'));
 
-const render = Comp => {
+const render = Component => {
     ReactDOM.render(
-        // Wrap App inside AppContainer
-        <AppContainer>
-            <Provider store={store}>
-                <ThemeProvider theme={theme}>
-                    <Comp />
-                </ThemeProvider>
-            </Provider>
-        </AppContainer>,
+        <Provider store={store}>
+            <ThemeProvider theme={theme}>
+                <Component />
+            </ThemeProvider>
+        </Provider>,
         document.getElementById('root')
     );
 };
 
 render(App);
 
-if (process.env.NODE_ENV !== 'production' && module['hot']) {
+if (module['hot']) {
     module['hot'].accept('./App', () => {
         render(App);
     });

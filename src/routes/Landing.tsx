@@ -8,14 +8,14 @@
 import React, {Component} from 'react';
 import styled, {css, keyframes} from 'styled-components';
 import {Box, palette, Flex} from '@baidu/rubik-ui';
-import AuthGuard from '@/api/AuthGuard';
+import AuthGuard from 'api/AuthGuard';
 import {
     withRouter,
     RouteComponentProps,
     Redirect,
     Link
 } from 'react-router-dom';
-import Config from '@/config';
+import Config from 'config';
 
 type Props = {} & RouteComponentProps;
 interface State {
