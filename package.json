@@ -2,6 +2,7 @@
     "name": "cra-ts-zero",
     "version": "0.1.0",
     "license": "MIT",
+    "homepage": ".",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
@@ -9,6 +10,23 @@
         "eject": "react-scripts eject",
         "analyze": "source-map-explorer build/static/js/main.*",
         "types-installer": "types-installer"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js, scss, css, html}": [
+            "prettier --write",
+            "eslint --fix",
+            "git add"
+        ],
+        "*.{ts,tsx}": [
+            "prettier --write",
+            "eslint --fix",
+            "git add"
+        ]
     },
     "dependencies": {
         "@baidu/rubik-ui": "^0.2.7",
