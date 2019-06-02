@@ -18,8 +18,9 @@ function getRem(pwidth, prem) {
     let html = document.getElementsByTagName('html')[0];
     let dpr = window.devicePixelRatio;
     let oWidth =
-        (document.body.clientWidth || document.documentElement.clientWidth) *
-        dpr;
+        (html.clientWidth ||
+            document.body.clientWidth ||
+            document.documentElement.clientWidth) * dpr;
     html.style.fontSize = ((oWidth / pwidth) * prem) / dpr + 'px';
 }
 
