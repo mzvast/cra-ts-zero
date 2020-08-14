@@ -1,8 +1,8 @@
 // @flow
 /**
  * @file [prettier.config]
- * @author [wangyang65]
- * @email [wangyang65@baidu.com]
+ * @author [mzvast]
+ * @email [mzvast@gmail.com]
  * @create date 2019-01-07 14:29:15
  */
 module.exports = {
