@@ -1,7 +1,7 @@
 /**
  * @file [config-overrides]
- * @author [wangyang65]
- * @email [wangyang65@baidu.com]
+ * @author [mzvast]
+ * @email [mzvast@gmail.com]
  * @create date 2018-03-15 03:28:17
  */
 /* eslint-disable */
