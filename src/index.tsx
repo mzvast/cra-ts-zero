@@ -13,7 +13,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux';
 import {store} from './store';
-import {ThemeProvider} from '@baidu/rubik-ui';
+import {ThemeProvider} from 'galaco';
 import ThemeLoader from './theme/ThemeLoader';
 
 const theme = ThemeLoader.getThemeConfig('green');

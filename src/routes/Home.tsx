@@ -8,7 +8,7 @@
 import React, {Component} from 'react';
 import {Link, Route, withRouter, Switch} from 'react-router-dom';
 import styled, {css, keyframes} from 'styled-components';
-import {Box, palette, Flex} from '@baidu/rubik-ui';
+import {Box, palette, Flex} from 'galaco';
 import {connect} from 'react-redux';
 import {iRootState, Dispatch} from 'store';
 
@@ -36,7 +36,4 @@ class Home extends Component<Props, State> {
     }
 }
 
-export default connect(
-    mapState,
-    mapDispatch
-)(Home);
+export default connect(mapState, mapDispatch)(Home);

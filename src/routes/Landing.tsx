@@ -7,7 +7,7 @@
 /* eslint-disable max-len,babel/new-cap,operator-linebreak,fecs-export-on-declare,space-before-function-paren */
 import React, {Component} from 'react';
 import styled, {css, keyframes} from 'styled-components';
-import {Box, palette, Flex} from '@baidu/rubik-ui';
+import {Box, palette, Flex} from 'galaco';
 import AuthGuard from 'api/AuthGuard';
 import {
     withRouter,
