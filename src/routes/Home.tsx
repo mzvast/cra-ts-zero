@@ -4,7 +4,7 @@
  * @email [mzvast@gmail.com]
  * @create date 2019-05-30 19:31:31
  */
-/* eslint-disable max-len,babel/new-cap,operator-linebreak,fecs-export-on-declare,space-before-function-paren */
+/* eslint-disable max-len,operator-linebreak,space-before-function-paren */
 import React, {Component} from 'react';
 import {Link, Route, withRouter, Switch} from 'react-router-dom';
 import styled, {css, keyframes} from 'styled-components';

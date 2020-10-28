@@ -4,23 +4,32 @@
  * @email [mzvast@gmail.com']
  * @create date 2019-04-22 14:24:40
  */
-/* eslint-disable max-len,babel/new-cap,operator-linebreak,fecs-export-on-declare,space-before-function-paren */
+/* eslint-disable max-len,operator-linebreak,space-before-function-paren */
 module.exports = {
     parser: '@typescript-eslint/parser', // Specifies the ESLint parser
     extends: [
-        'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
-        'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+        '@ecomfe/eslint-config',
+        '@ecomfe/eslint-config/typescript',
+        '@ecomfe/eslint-config/react',
+        // 'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
+        // 'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
         'prettier/@typescript-eslint', // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
         'plugin:prettier/recommended' // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
     ],
     parserOptions: {
-        ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
+        ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
         sourceType: 'module', // Allows for the use of imports
         ecmaFeatures: {
             jsx: true // Allows for the parsing of JSX
         }
     },
     rules: {
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': ['error'],
+        'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+        'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
+        'no-unused-vars': 'off',
+        // '@typescript-eslint/no-unused-vars': ['error'],
         // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
         // e.g. "@typescript-eslint/explicit-function-return-type": "off",
         '@typescript-eslint/explicit-function-return-type': 'off',
@@ -28,7 +37,11 @@ module.exports = {
         '@typescript-eslint/no-empty-interface': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/camelcase': 'off',
-        '@typescript-eslint/no-unused-vars': 'off'
+        '@typescript-eslint/no-unused-vars': 'off',
+        'spaced-comment': 'off',
+        '@typescript-eslint/ban-types': 'off', // fixme: cannot work if not off
+        '@typescript-eslint/member-ordering': 'off',
+        'no-console': 'off'
     },
     settings: {
         react: {

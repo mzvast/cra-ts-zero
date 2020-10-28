@@ -4,7 +4,7 @@
  * @email [mzvast@gmail.com]
  * @create date 2019-02-28 17:15:25
  */
-/* eslint-disable max-len,babel/new-cap,operator-linebreak,fecs-export-on-declare,space-before-function-paren */
+/* eslint-disable max-len,operator-linebreak,space-before-function-paren */
 const palette: {[key: string]: string} = {
     cRed100: 'rgba(221,97,97,1)',
     cGray650: 'rgba(48, 48, 48, 1)',

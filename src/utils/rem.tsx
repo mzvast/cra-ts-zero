@@ -4,7 +4,7 @@
  * @email [mzvast@gmail.com]
  * @create date 2019-06-02 16:14:19
  */
-/* eslint-disable max-len,babel/new-cap,operator-linebreak,fecs-export-on-declare,space-before-function-paren */
+/* eslint-disable max-len,operator-linebreak,space-before-function-paren */
 /* eslint-disable */
 //@ts-ignore
 const pwidth = 1280;

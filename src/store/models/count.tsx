@@ -4,7 +4,7 @@
  * @email [mzvast@gmail.com]
  * @create date 2019-05-30 19:34:21
  */
-/* eslint-disable max-len,babel/new-cap,operator-linebreak,fecs-export-on-declare,space-before-function-paren */
+/* eslint-disable max-len,operator-linebreak,space-before-function-paren */
 
 import {createModel} from '@rematch/core';
 

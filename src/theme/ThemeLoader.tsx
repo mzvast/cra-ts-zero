@@ -4,9 +4,9 @@
  * @email [mzvast@gmail.com]
  * @create date 2019-05-13 11:12:23
  */
-/* eslint-disable max-len,babel/new-cap,operator-linebreak,fecs-export-on-declare,space-before-function-paren */
+/* eslint-disable max-len,operator-linebreak,space-before-function-paren */
 import * as themePalette from './palette';
-import palette from './palette';
+
 class ThemeLoader {
     // 不支持动态换肤，只初始化一次
     // constructor(cb) {
@@ -20,7 +20,7 @@ class ThemeLoader {
     }
     getPrimaryColor(): Promise<string> {
         //  异步API
-        return new Promise(resolve => {
+        return new Promise((resolve) => {
             setTimeout(() => {
                 resolve('green');
             }, 0);
@@ -36,7 +36,7 @@ class ThemeLoader {
     getThemeConfig(primaryColor: string) {
         const theme = {
             palette: {
-                ...palette,
+                ...themePalette.default,
                 ...themePalette[primaryColor]
             }
         };

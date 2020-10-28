@@ -4,7 +4,7 @@
  * @email [mzvast@gmail.com]
  * @create date 2019-04-22 17:13:24
  */
-/* eslint-disable max-len,babel/new-cap,operator-linebreak,fecs-export-on-declare,space-before-function-paren */
+/* eslint-disable max-len,operator-linebreak,space-before-function-paren */
 // https://github.com/rematch/rematch/blob/master/docs/recipes/typescript.md
 
 import {init, RematchRootState} from '@rematch/core';
