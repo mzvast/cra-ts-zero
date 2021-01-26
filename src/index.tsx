@@ -7,23 +7,30 @@
 /* eslint-disable max-len,operator-linebreak,space-before-function-paren */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import 'utils/rem';
 import App from './App';
 import {Provider} from 'react-redux';
 import {store} from './store';
-import {ThemeProvider} from 'galaco';
+import {StyleSheetManager, ThemeProvider} from 'galaco';
 import ThemeLoader from './theme/ThemeLoader';
 import reportWebVitals from './reportWebVitals';
+import GlobalStyle from './theme/GlobalStyle';
+import getPx2vw from 'utils/getPx2vw';
 
 const theme = ThemeLoader.getThemeConfig('green');
+const cssPlugin = [getPx2vw(1280)];
 const render = (Component) => {
     ReactDOM.render(
-        <Provider store={store}>
-            <ThemeProvider theme={theme}>
-                <Component />
-            </ThemeProvider>
-        </Provider>,
+        <StyleSheetManager stylisPlugins={cssPlugin}>
+            <>
+                <GlobalStyle />
+                <Provider store={store}>
+                    <ThemeProvider theme={theme}>
+                        <Component />
+                    </ThemeProvider>
+                </Provider>
+            </>
+        </StyleSheetManager>,
         document.getElementById('root')
     );
 };
