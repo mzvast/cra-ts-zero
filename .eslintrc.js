@@ -41,7 +41,8 @@ module.exports = {
         'spaced-comment': 'off',
         '@typescript-eslint/ban-types': 'off', // fixme: cannot work if not off
         '@typescript-eslint/member-ordering': 'off',
-        'no-console': 'off'
+        'no-console': 'off',
+        '@typescript-eslint/consistent-type-definitions': 'off'
     },
     settings: {
         react: {

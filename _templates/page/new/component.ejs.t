@@ -7,7 +7,6 @@ to: src/routes/<%= h.changeCase.paramCase(title)%>/<%= title%>.tsx
  * @email []
  * @create date <%= h.getDate() %>
  */
-/* eslint-disable max-len,babel/new-cap,operator-linebreak,fecs-export-on-declare,space-before-function-paren */
 import React from 'react';
 import {styled, css, keyframes, Box, palette, Flex}  from 'galaco';
 type Props = {};
