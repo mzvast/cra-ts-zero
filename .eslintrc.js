@@ -42,7 +42,8 @@ module.exports = {
         '@typescript-eslint/ban-types': 'off', // fixme: cannot work if not off
         '@typescript-eslint/member-ordering': 'off',
         'no-console': 'off',
-        '@typescript-eslint/consistent-type-definitions': 'off'
+        '@typescript-eslint/consistent-type-definitions': 'off',
+        'no-debugger': 'off'
     },
     settings: {
         react: {
