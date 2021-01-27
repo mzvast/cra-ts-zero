@@ -8,12 +8,13 @@
 
 import React from 'react';
 import {Route, Redirect} from 'react-router-dom';
-import Config from 'config';
+import config from 'config';
 import AuthGuard from 'api/AuthGuard';
 // https://tylermcginnis.com/react-router-protected-routes-authentication/
 const PrivateRoute = ({component: Component, ...rest}) => {
     if (!AuthGuard.isAuthenticated) {
-        window.history.back(); // fixme: 如果空降无权限页会遣返
+        // window.history.back(); // fixme: 如果空降无权限页会遣返
+        return <Redirect to={config.path.root} />;
     }
 
     function renderFn(props: any) {
@@ -23,7 +24,7 @@ const PrivateRoute = ({component: Component, ...rest}) => {
         ) : (
             <Redirect
                 to={{
-                    pathname: Config.path.root,
+                    pathname: config.path.root,
                     state: {from: props.location}
                 }}
             />

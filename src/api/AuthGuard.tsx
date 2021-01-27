@@ -7,12 +7,12 @@
 /* eslint-disable max-len,operator-linebreak,space-before-function-paren */
 export default {
     isAuthenticated: false,
-    authenticate(cb?: () => void) {
+    authenticate() {
         this.isAuthenticated = true;
-        setTimeout(cb, 100);
+        return Promise.resolve();
     },
-    signout(cb?: () => void) {
+    signOut() {
         this.isAuthenticated = false;
-        setTimeout(cb, 100);
+        return Promise.resolve();
     }
 };

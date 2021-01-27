@@ -55,12 +55,12 @@ class Landing extends Component<Props, State> {
     }
 
     login = () => {
-        AuthGuard.authenticate(() => {
+        AuthGuard.authenticate().then(() => {
             this.setState({redirectToReferrer: false});
         });
     };
     logout = () => {
-        AuthGuard.signout(() => {
+        AuthGuard.signOut().then(() => {
             this.props.history.push(Config.path.root);
         });
     };
