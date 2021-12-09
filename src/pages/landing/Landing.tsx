@@ -31,6 +31,7 @@ class Landing extends Component<Props, State> {
     static defaultProps = {};
 
     render() {
+        //@ts-ignore
         const {from} = this.props.location.state || {
             from: {pathname: pathConfig.counter}
         };
@@ -39,7 +40,7 @@ class Landing extends Component<Props, State> {
             return <Redirect to={from} />;
         }
         return (
-            <Box>
+            <div className="bg-pink-400">
                 LandingPage
                 {AuthGuard.isAuthenticated ? (
                     <button onClick={this.logout}>logout</button>
@@ -49,7 +50,7 @@ class Landing extends Component<Props, State> {
                 <li>
                     <Link to={pathConfig.counter}>CounterPrivate</Link>
                 </li>
-            </Box>
+            </div>
         );
     }
 

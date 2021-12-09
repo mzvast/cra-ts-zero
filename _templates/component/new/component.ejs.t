@@ -9,7 +9,7 @@ to: src/components/<%= h.changeCase.paramCase(title)%>/<%= title%>.tsx
  */
 import React from 'react';
 import {styled, css, keyframes, Box, palette, Flex}  from 'galaco';
-interface Props {};
+export interface Props {};
 const <%= title%>: React.FC<Props> = () => {
     return <div><%= title%></div>;
 }

@@ -30,7 +30,7 @@ export default function getPx2vw(pWidth: number) {
 
     const dpr = window.devicePixelRatio || 1;
 
-    const normalTransform = (content) =>
+    const normalTransform = content =>
         content.replace(/([0-9.]+)px/g, function (match, p1) {
             // console.log('plugin::match,p1', match, p1);
             const val = Number(p1);
@@ -78,6 +78,7 @@ export default function getPx2vw(pWidth: number) {
         }
     }
     // eslint-disable-next-line dot-notation
+    // eslint-disable-next-line @typescript-eslint/dot-notation
     window['galacoMoGaiCssPlugin'] = px2vw; // MoGai Hook
     return px2vw;
 }

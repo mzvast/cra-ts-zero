@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'utils/rem';
+import 'styles/tailwind.css';
 import {Provider} from 'react-redux';
 import {StyleSheetManager, ThemeProvider} from 'galaco';
 
