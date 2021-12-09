@@ -10,7 +10,7 @@ import App from './app/App';
 import {store} from './store';
 import ThemeLoader from './theme/ThemeLoader';
 import reportWebVitals from './reportWebVitals';
-import GlobalStyle from './theme/GlobalStyle';
+import GlobalStyle from './styles/GlobalStyle';
 
 const theme = ThemeLoader.getThemeConfig('green');
 const cssPlugin = [getPx2vw(1280)];
