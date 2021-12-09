@@ -1,1 +1,2 @@
-export {default} from './config';
+// 一些全局配置
+export {};

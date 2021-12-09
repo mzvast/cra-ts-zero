@@ -8,14 +8,16 @@
 import React, {Component} from 'react';
 import styled, {css, keyframes} from 'styled-components';
 import {Box, palette, Flex} from 'galaco';
-import AuthGuard from 'api/AuthGuard';
 import {
     withRouter,
     RouteComponentProps,
     Redirect,
     Link
 } from 'react-router-dom';
-import Config from 'config';
+
+import AuthGuard from 'utils/AuthGuard';
+import pathConfig from 'config/pathConfig';
+import {browserHistory} from 'utils/browserHistory';
 
 type Props = {} & RouteComponentProps;
 interface State {
@@ -30,7 +32,7 @@ class Landing extends Component<Props, State> {
 
     render() {
         const {from} = this.props.location.state || {
-            from: {pathname: Config.path.home}
+            from: {pathname: pathConfig.counter}
         };
         const {redirectToReferrer} = this.state;
         if (redirectToReferrer) {
@@ -42,27 +44,20 @@ class Landing extends Component<Props, State> {
                 {AuthGuard.isAuthenticated ? (
                     <button onClick={this.logout}>logout</button>
                 ) : (
-                    <button onClick={this.login}>login</button>
+                    <button onClick={this.login}>go login page</button>
                 )}
                 <li>
-                    <Link to={Config.path.home}>Home</Link>
-                </li>
-                <li>
-                    <Link to={Config.path.joke}>Joke</Link>
+                    <Link to={pathConfig.counter}>CounterPrivate</Link>
                 </li>
             </Box>
         );
     }
 
     login = () => {
-        AuthGuard.authenticate().then(() => {
-            this.setState({redirectToReferrer: false});
-        });
+        browserHistory.push(pathConfig.login);
     };
     logout = () => {
-        AuthGuard.signOut().then(() => {
-            this.props.history.push(Config.path.root);
-        });
+        AuthGuard.signout();
     };
 }
-export default withRouter(Landing);
+export default Landing;
