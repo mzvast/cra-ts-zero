@@ -9,7 +9,7 @@
 import React from 'react';
 import {Redirect, Route} from 'react-router-dom';
 
-import AuthGuard from 'utils/AuthGuard';
+import AuthGuard from 'components/zion-auth/AuthGuard';
 import pathConfig from 'config/pathConfig';
 // import config from 'config';
 // // import AuthGuard from 'api/AuthGuard';

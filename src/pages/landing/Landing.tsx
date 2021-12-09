@@ -15,7 +15,7 @@ import {
     Link
 } from 'react-router-dom';
 
-import AuthGuard from 'utils/AuthGuard';
+import AuthGuard from 'components/zion-auth/AuthGuard';
 import pathConfig from 'config/pathConfig';
 import {browserHistory} from 'utils/browserHistory';
 

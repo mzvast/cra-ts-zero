@@ -5,7 +5,7 @@
  * @create date 2019-03-13 16:16:32
  */
 
-import {Role} from 'types/role';
+import {Role} from './types';
 
 export default {
     isAuthenticated: false,

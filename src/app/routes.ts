@@ -1,7 +1,7 @@
 import React from 'react';
 
 import pathConfig from 'config/pathConfig';
-import {Role} from 'types/role';
+import {Role} from 'components/zion-auth/types';
 
 const Landing = React.lazy(() => import('pages/landing'));
 const Login = React.lazy(() => import('pages/login'));

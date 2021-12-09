@@ -1,5 +1,5 @@
-import {Role} from 'types/role';
-import AuthGuard from 'utils/AuthGuard';
+import {Role} from 'components/zion-auth/types';
+import AuthGuard from 'components/zion-auth/AuthGuard';
 import {browserHistory} from 'utils/browserHistory';
 
 const useLogin = () => {
