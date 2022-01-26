@@ -3239,10 +3239,10 @@
     jest-diff "^27.0.0"
     pretty-format "^27.0.0"
 
-"@types/jest@26.0.20":
-  version "26.0.20"
-  resolved "https://registry.npmmirror.com/@types/jest/download/@types/jest-26.0.20.tgz?cache=0&sync_timestamp=1637262564392&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-26.0.20.tgz#cd2f2702ecf69e86b586e1f5223a60e454056307"
-  integrity sha1-zS8nAuz2noa1huH1Ijpg5FQFYwc=
+"@types/jest@26.0.24":
+  version "26.0.24"
+  resolved "https://registry.npmmirror.com/@types/jest/download/@types/jest-26.0.24.tgz#943d11976b16739185913a1936e0de0c4a7d595a"
+  integrity sha1-lD0Rl2sWc5GFkToZNuDeDEp9WVo=
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
