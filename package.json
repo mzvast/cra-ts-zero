@@ -36,7 +36,7 @@
         "@rematch/core": "1.4.0",
         "ahooks": "3.0.0",
         "axios": "0.21.4",
-        "galaco": "0.6.3-alpha.4",
+        "galaco": "0.6.4",
         "history": "4.10.1",
         "react": "17.0.2",
         "react-dom": "17.0.2",

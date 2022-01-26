@@ -7915,10 +7915,10 @@ fuse.js@^3.6.1:
   resolved "https://registry.npm.taobao.org/fuse.js/download/fuse.js-3.6.1.tgz#7de85fdd6e1b3377c23ce010892656385fd9b10c"
   integrity sha1-fehf3W4bM3fCPOAQiSZWOF/ZsQw=
 
-galaco@0.6.3-alpha.4:
-  version "0.6.3-alpha.4"
-  resolved "https://registry.npmmirror.com/galaco/download/galaco-0.6.3-alpha.4.tgz#796f8b503f07877f3ce457a153605ba2d006556d"
-  integrity sha1-eW+LUD8Hh3885FehU2BbotAGVW0=
+galaco@0.6.4:
+  version "0.6.4"
+  resolved "https://registry.npmmirror.com/galaco/download/galaco-0.6.4.tgz#a4496cda44428a9af8fe37d2a80de727472d1a5a"
+  integrity sha512-hQ8meNy/hMA503wPe0fyVTRMlotC3mDN+Y8oEnUBiF0wERfJMA8wmh8uwG7kf/ksWH/GKic9HbTDNmVLaNI7yA==
   dependencies:
     lodash "^4.17.11"
     polished "^3.4.1"
